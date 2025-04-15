@@ -15,7 +15,6 @@ export const logout = async (
       .cookie('sid', '', {
         maxAge: 0,
         path: '/',
-        domain: 'localhost',
         httpOnly: env.NODE_ENV === 'production',
         sameSite: 'lax',
       })
@@ -39,7 +38,6 @@ export const logoutAllDevices = async (
       .cookie('sid', '', {
         maxAge: 0,
         path: '/',
-        domain: 'localhost',
         httpOnly: env.NODE_ENV === 'production',
         sameSite: 'lax',
       })

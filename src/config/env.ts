@@ -7,7 +7,6 @@ const envSchema = z.object({
   JWT_SECRET: z.string().min(10),
   NODE_ENV: z.string(),
   PORT: z.string(),
-  DOMAIN: z.string(),
 });
 
 export const env = envSchema.parse({
@@ -15,5 +14,4 @@ export const env = envSchema.parse({
   JWT_SECRET: process.env.JWT_SECRET,
   NODE_ENV: process.env.NODE_ENV,
   PORT: process.env.PORT,
-  DOMAIN: process.env.DOMAIN,
 });

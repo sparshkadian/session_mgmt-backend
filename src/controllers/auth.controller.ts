@@ -13,7 +13,6 @@ function sendResponse(res: Response, sessionId: string, newUser: boolean) {
         httpOnly: true,
         secure: env.NODE_ENV === 'production',
         path: '/',
-        domain: env.DOMAIN,
         sameSite: 'lax',
         maxAge: 24 * 60 * 60 * 1000,
       })
@@ -25,7 +24,6 @@ function sendResponse(res: Response, sessionId: string, newUser: boolean) {
         httpOnly: true,
         secure: env.NODE_ENV === 'production',
         path: '/',
-        domain: env.DOMAIN,
         sameSite: 'lax',
         maxAge: 24 * 60 * 60 * 1000,
       })

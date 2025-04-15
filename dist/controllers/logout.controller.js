@@ -23,7 +23,6 @@ const logout = (req, res, next) => __awaiter(void 0, void 0, void 0, function* (
             .cookie('sid', '', {
             maxAge: 0,
             path: '/',
-            domain: 'localhost',
             httpOnly: env_1.env.NODE_ENV === 'production',
             sameSite: 'lax',
         })
@@ -44,7 +43,6 @@ const logoutAllDevices = (req, res, next) => __awaiter(void 0, void 0, void 0, f
             .cookie('sid', '', {
             maxAge: 0,
             path: '/',
-            domain: 'localhost',
             httpOnly: env_1.env.NODE_ENV === 'production',
             sameSite: 'lax',
         })

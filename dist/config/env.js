@@ -12,12 +12,10 @@ const envSchema = zod_1.z.object({
     JWT_SECRET: zod_1.z.string().min(10),
     NODE_ENV: zod_1.z.string(),
     PORT: zod_1.z.string(),
-    DOMAIN: zod_1.z.string(),
 });
 exports.env = envSchema.parse({
     DATABASE_URL: process.env.DATABASE_URL,
     JWT_SECRET: process.env.JWT_SECRET,
     NODE_ENV: process.env.NODE_ENV,
     PORT: process.env.PORT,
-    DOMAIN: process.env.DOMAIN,
 });
